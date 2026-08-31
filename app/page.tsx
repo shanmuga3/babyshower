@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useEffect, useMemo } from 'react';
-import Image from 'next/image';
 import { motion } from 'motion/react';
 import { AdBanner } from "@/components/AdBanner";
 import { 
@@ -79,7 +78,7 @@ export default function BabyShowerInvitation() {
             </div>
             <div>
               <h1 className="font-playfair font-bold text-base sm:text-lg text-pink-900 leading-tight">வளைகாப்பு அழைப்பிதழ்</h1>
-              <p className="text-xs text-slate-500">செப்டம்பர் 07, 2024 • சமத்துவபுரம்</p>
+              <p className="text-xs text-slate-500">செப்டம்பர் 17, 2026 • சமத்துவபுரம்</p>
             </div>
           </div>
 
@@ -118,10 +117,9 @@ export default function BabyShowerInvitation() {
         >
           <div className="relative w-52 h-52 sm:w-64 sm:h-64 rounded-full bg-gradient-to-tr from-pink-300 via-rose-200 to-amber-200 p-1.5 shadow-xl animate-pulse-soft overflow-hidden flex items-center justify-center">
             <div className="w-full h-full rounded-full overflow-hidden relative bg-white">
-              <Image
+              <img
                 src="/images/hero.png"
                 alt="Parents to be"
-                fill
                 className="object-cover object-center scale-135 transform hover:scale-145 transition duration-500"
                 referrerPolicy="no-referrer"
               />
@@ -175,8 +173,8 @@ export default function BabyShowerInvitation() {
             </div>
             <div className="text-left">
               <p className="text-xs uppercase tracking-wider text-slate-400 font-medium">தேதி (Date)</p>
-              <p className="font-playfair font-bold text-lg sm:text-xl text-slate-800">செப்டம்பர் 07, 2024</p>
-              <p className="text-xs text-pink-600 font-medium">சனிவாரம் (Saturday)</p>
+              <p className="font-playfair font-bold text-lg sm:text-xl text-slate-800">செப்டம்பர் 17, 2026</p>
+              <p className="text-xs text-pink-600 font-medium">வியாழக்கிழமை (Thursday)</p>
             </div>
           </div>
 
@@ -328,25 +326,13 @@ export default function BabyShowerInvitation() {
             <Heart className="w-5 h-5 fill-pink-500" />
           </div>
           <p className="text-xs text-slate-500">
-            வளைகாப்பு விழா • செப்டம்பர் 07, 2024 காலை 10:00 மணி • சமத்துவபுரம், சக்கிமங்கலம்
+            வளைகாப்பு விழா • செப்டம்பர் 17, 2026 காலை 10:00 மணி • சமத்துவபுரம், சக்கிமங்கலம்
           </p>
           <p className="text-[11px] text-slate-400 pt-2 font-medium">
             அன்புடன், <strong className="text-pink-700">தினேஷ் & நாகவள்ளி</strong> மற்றும் குடும்பத்தினர்.
           </p>
         </div>
       </footer>
-
-      {/* Music notifier popup */}
-      {isMusicPlaying && (
-        <div className="fixed bottom-4 right-4 bg-slate-900 text-white px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3 z-50 text-xs animate-bounce">
-          <Music className="w-4 h-4 text-pink-400 animate-spin" />
-          <span>மங்களகரமான இசை ஒலிக்கிறது...</span>
-          <button onClick={() => setIsMusicPlaying(false)} className="text-slate-400 hover:text-white ml-2">
-            <X className="w-3.5 h-3.5" />
-          </button>
-        </div>
-      )}
-
     </div>
   );
 }

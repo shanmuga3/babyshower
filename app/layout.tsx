@@ -3,17 +3,17 @@ import Script from "next/script";
 import './globals.css'; // Global styles
 
 export const metadata: Metadata = {
-  title: 'Baby Shower Invitation - Sakkimangalam | Sep 07, 2024',
-  description: 'Warm and joyful baby shower invitation for Sep 07, 2024 at 10:00 AM with venue map, directions, and guest book.',
+  title: 'Baby Shower Invitation - Sakkimangalam | Sep 17, 2026',
+  description: 'Warm and joyful baby shower invitation for Sep 17, 2026 at 10:00 AM with venue map, directions, and guest book.',
   openGraph: {
-    title: 'Baby Shower Invitation - Sakkimangalam | Sep 07, 2024',
-    description: 'Warm and joyful baby shower invitation for Sep 07, 2024 at 10:00 AM with venue map, directions, and guest book.',
+    title: 'Baby Shower Invitation - Sakkimangalam | Sep 17, 2026',
+    description: 'Warm and joyful baby shower invitation for Sep 17, 2026 at 10:00 AM with venue map, directions, and guest book.',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Baby Shower Invitation - Sakkimangalam | Sep 07, 2024',
-    description: 'Warm and joyful baby shower invitation for Sep 07, 2024 at 10:00 AM with venue map, directions, and guest book.',
+    title: 'Baby Shower Invitation - Sakkimangalam | Sep 17, 2026',
+    description: 'Warm and joyful baby shower invitation for Sep 17, 2026 at 10:00 AM with venue map, directions, and guest book.',
   },
 };
 
