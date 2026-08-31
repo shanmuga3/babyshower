@@ -1,0 +1,6 @@
+{
+  "name": "Baby Shower Invitation - Sakkimangalam",
+  "description": "Warm and joyful baby shower invitation for Sep 07, 2024 at 10:00 AM with venue map, directions, and guest book.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
