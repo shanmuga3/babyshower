@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import Image from 'next/image';
 import { motion } from 'motion/react';
+import { AdBanner } from "@/components/AdBanner";
 import { 
   Calendar, Clock, MapPin, Navigation, Heart, Sparkles, Gift, 
   Send, Users, MessageCircle, Music, Volume2, VolumeX, 
@@ -78,7 +79,7 @@ export default function BabyShowerInvitation() {
             </div>
             <div>
               <h1 className="font-playfair font-bold text-base sm:text-lg text-pink-900 leading-tight">வளைகாப்பு அழைப்பிதழ்</h1>
-              <p className="text-xs text-slate-500">செப்டம்பர் 07, 2024 • சக்கிமங்கலம்</p>
+              <p className="text-xs text-slate-500">செப்டம்பர் 07, 2024 • சமத்துவபுரம்</p>
             </div>
           </div>
 
@@ -91,12 +92,6 @@ export default function BabyShowerInvitation() {
               {isMusicPlaying ? <Volume2 className="w-4 h-4 animate-pulse" /> : <VolumeX className="w-4 h-4" />}
               <span className="hidden sm:inline">{isMusicPlaying ? 'இசை ஒலிக்கிறது' : 'இசை இயக்கு'}</span>
             </button>
-            <a
-              href="#rsvp"
-              className="px-4 py-1.5 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 text-white font-medium text-xs shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5"
-            >
-              வருகை பதிவு
-            </a>
           </div>
         </div>
       </header>
@@ -121,10 +116,10 @@ export default function BabyShowerInvitation() {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="my-6 flex justify-center"
         >
-          <div className="relative w-40 h-40 sm:w-52 sm:h-52 rounded-full bg-gradient-to-tr from-pink-300 via-rose-200 to-amber-200 p-1.5 shadow-xl animate-pulse-soft overflow-hidden flex items-center justify-center">
+          <div className="relative w-52 h-52 sm:w-64 sm:h-64 rounded-full bg-gradient-to-tr from-pink-300 via-rose-200 to-amber-200 p-1.5 shadow-xl animate-pulse-soft overflow-hidden flex items-center justify-center">
             <div className="w-full h-full rounded-full overflow-hidden relative bg-white">
               <Image
-                src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop&q=80"
+                src="/images/hero.png"
                 alt="Parents to be"
                 fill
                 className="object-cover object-center scale-135 transform hover:scale-145 transition duration-500"
@@ -138,13 +133,25 @@ export default function BabyShowerInvitation() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.2 }}
-          className="font-playfair text-4xl sm:text-6xl md:text-7xl font-bold text-slate-900 tracking-tight mb-6"
+          className="font-playfair text-4xl sm:text-6xl md:text-7xl font-bold text-slate-900 tracking-tight mb-4"
         >
           சீமந்த வளைகாப்பு விழா <br />
           <span className="bg-gradient-to-r from-pink-600 via-rose-500 to-amber-600 bg-clip-text text-transparent font-pacifico text-3xl sm:text-5xl font-normal">
             Baby Shower Celebration
           </span>
         </motion.h1>
+
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="my-4 inline-block px-6 py-2.5 rounded-2xl bg-white/80 border border-pink-200/80 shadow-sm"
+        >
+          <p className="font-playfair text-xl sm:text-2xl font-bold text-pink-900">
+            தினேஷ் <span className="text-pink-500 font-normal mx-2">&</span> நாகவள்ளி
+          </p>
+          <p className="text-xs text-slate-500 font-medium tracking-wide">Dinesh & Nagavalli</p>
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0 }}
@@ -268,7 +275,7 @@ export default function BabyShowerInvitation() {
                   <span>samuthayakoodam, samathuvapuram</span>
                 </p>
                 <p className="text-xs text-slate-500 italic">
-                  வாகனம் நிறுத்த পর্যাপ্ত வசதிகள் செய்யப்பட்டுள்ளன. எளிதில் வந்து செல்லக்கூடிய வழித்தடம்.
+                  வாகனம் நிறுத்த வசதிகள் செய்யப்பட்டுள்ளன. எளிதில் வந்து செல்லக்கூடிய வழித்தடம்.
                 </p>
               </div>
 
@@ -306,53 +313,9 @@ export default function BabyShowerInvitation() {
       {/* Google Ads Banner Section */}
       <section className="py-10 px-4 max-w-4xl mx-auto z-10 relative">
         <div className="bg-gradient-to-r from-amber-50 via-pink-50/40 to-rose-50 border border-amber-200/70 rounded-2xl p-6 shadow-xs relative overflow-hidden">
-          <div className="absolute top-2 right-3 text-[10px] uppercase font-semibold tracking-wider text-amber-700/60 bg-amber-100/80 px-2 py-0.5 rounded">
-            Google Ads / விளம்பரம்
-          </div>
-
           <div className="flex flex-col sm:flex-row items-center gap-6">
-            <div className="w-16 h-16 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center shrink-0 shadow-xs">
-              <Gift className="w-8 h-8" />
-            </div>
-            
-            <div className="flex-1 text-center sm:text-left">
-              <h4 className="font-playfair font-bold text-lg text-slate-900 mb-1">
-                குழந்தைகளுக்கான பிரத்யேகப் பரிசுகள் மற்றும் ஆடைகள்
-              </h4>
-              <p className="text-slate-600 text-xs sm:text-sm mb-3">
-                வளைகாப்பு மற்றும் பிறந்தநாள் விழா பரிசுகள், இயற்கை முறை குழந்தை ஆடைகள் மற்றும் புகைப்படத் தொகுப்புகள் சிறப்புத் தள்ளுபடியில்!
-              </p>
-              <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3">
-                <button
-                  onClick={() => setAdClicked('குழந்தை பரிசுத் தொகுப்புகள்')}
-                  className="px-4 py-2 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-xs font-medium transition shadow-xs flex items-center gap-1.5"
-                >
-                  <span>பரிசுப் பொருட்களைப் பார்</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </button>
-                <button
-                  onClick={() => setAdClicked('நவஜாத குழந்தை போட்டோகிராபி')}
-                  className="px-4 py-2 rounded-lg bg-white border border-amber-300 text-amber-800 hover:bg-amber-100/50 text-xs font-medium transition shadow-xs flex items-center gap-1.5"
-                >
-                  <span>புகைப்படப் பதிவு செய்ய</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </button>
-              </div>
-            </div>
+            <AdBanner dataAdSlot="top" />            
           </div>
-
-          {/* Ad interaction feedback modal notification */}
-          {adClicked && (
-            <div className="mt-4 p-3 bg-white rounded-xl border border-amber-300 text-xs text-amber-900 flex items-center justify-between shadow-xs">
-              <span className="flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-amber-600" />
-                விளம்பரம் தேர்ந்தெடுக்கப்பட்டது: <strong>{adClicked}</strong>. சிறப்புச் சலுகைகள் இணைக்கப்பட்டுள்ளன!
-              </span>
-              <button onClick={() => setAdClicked(null)} className="text-slate-400 hover:text-slate-600">
-                <X className="w-4 h-4" />
-              </button>
-            </div>
-          )}
         </div>
       </section>
 
@@ -365,10 +328,10 @@ export default function BabyShowerInvitation() {
             <Heart className="w-5 h-5 fill-pink-500" />
           </div>
           <p className="text-xs text-slate-500">
-            வளைகாப்பு விழா • செப்டம்பர் 07, 2024 காலை 10:00 மணி • சக்கிமங்கலம், தமிழ்நாடு
+            வளைகாப்பு விழா • செப்டம்பர் 07, 2024 காலை 10:00 மணி • சமத்துவபுரம், சக்கிமங்கலம்
           </p>
-          <p className="text-[11px] text-slate-400 pt-2">
-            அன்போடு குடும்பத்தினர்.
+          <p className="text-[11px] text-slate-400 pt-2 font-medium">
+            அன்புடன், <strong className="text-pink-700">தினேஷ் & நாகவள்ளி</strong> மற்றும் குடும்பத்தினர்.
           </p>
         </div>
       </footer>

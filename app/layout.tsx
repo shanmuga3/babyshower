@@ -1,4 +1,5 @@
 import type {Metadata} from 'next';
+import Script from "next/script";
 import './globals.css'; // Global styles
 
 export const metadata: Metadata = {
@@ -17,6 +18,8 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
+  const adsenseId = process.env.NEXT_PUBLIC_ADSENSE_ID;
+
   return (
     <html lang="en">
       <head>
@@ -25,6 +28,13 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet" />
       </head>
       <body suppressHydrationWarning className="font-poppins bg-pink-50 text-slate-800 antialiased selection:bg-pink-200 selection:text-pink-900">
+        {adsenseId && (
+          <Script
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}`}
+            crossOrigin="anonymous"
+            strategy="afterInteractive"
+          />
+        )}
         {children}
       </body>
     </html>
